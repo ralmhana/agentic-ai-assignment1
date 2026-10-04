@@ -3,7 +3,7 @@
 Two tiny calls through the same client and backend your ways use. The first
 offers one tool and asks the model to call it; the second sends the tool's
 result back and asks for a one-word answer. Together they cost a fraction of a
-cent, and they prove the four things the lab depends on: your key works, the
+cent, and they prove the four things the assignment depends on: your key works, the
 model is the one you chose, it calls tools, and pricing.yaml has its line.
 """
 
@@ -46,7 +46,7 @@ def _ping(settings) -> int:
           f"tool calls {[(c.name, c.input) for c in calls] or 'none'}")
     problems = []
     if not calls:
-        problems.append("the model did not call the tool: Lab 1's agent needs a model with tool calling")
+        problems.append("the model did not call the tool: Assignment 1's agent needs a model with tool calling")
     else:
         messages += [first.assistant_message(), {"role": "user", "content": [tool_result(calls[0], "ping")]}]
         second = client.create(system="You are a connectivity test. Answer in one word.",

@@ -1,4 +1,4 @@
-"""Lab 1, Parts B to D: build the tables in reports/LAB_01.json from your runs. This file is yours.
+"""Assignment 1, Parts B to D: build the tables in reports/LAB_01.json from your runs. This file is yours.
 
 Read every trace in runs/ and the comments in the tracker, decide each run's
 success with your eval/check_triage.check, and compute the `results` entry for
@@ -13,7 +13,7 @@ them here, from the traces, never by hand.
 
 
 def main() -> None:
-    raise NotImplementedError("Lab 1 Part B: build the results from runs/ and the tracker")
+    raise NotImplementedError("Assignment 1 Part B: build the results from runs/ and the tracker")
 
 
 if __name__ == "__main__":

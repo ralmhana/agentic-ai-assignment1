@@ -13,4 +13,4 @@ half (choose, post) are easier to reuse as two functions.
 
 
 def run(ctx) -> None:
-    raise NotImplementedError("Lab 1 Part B: the workflow")
+    raise NotImplementedError("Assignment 1 Part B: the workflow")

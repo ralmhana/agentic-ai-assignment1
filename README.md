@@ -12,9 +12,9 @@ when you close it.
 
 ## Start here
 
-You have two things: this repository, and the lab handout from your instructor.
+You have two things: this repository, and the assignment handout from your instructor.
 The handout says what to build and how it is graded; this file says how the
-repository works. For Lab 1, read the handout's "Getting started" first.
+repository works. For Assignment 1, read the handout's "Getting started" first.
 
 Everything that runs, meters and checks your work is built. The files you write
 are stubs that raise `NotImplementedError` until you fill them in, so nothing
@@ -48,7 +48,7 @@ page, with that page and the date you read it (the file shows how). On a free
 tier, still use the paid rate the page lists, or every cost comparison is $0.
 
 **Not sure which?** We recommend starting with Google's Gemini API, which has a
-free tier and was tested with this lab in October 2026: `provider:
+free tier and was tested with this assignment in October 2026: `provider:
 openai-compatible`, `base_url: https://generativelanguage.googleapis.com/v1beta/openai/`,
 `api_key_env: GEMINI_API_KEY`, and `model: gemini-3.5-flash-lite` (the smaller
 `gemini-3.1-flash-lite` often searched in circles). Nothing here depends on it:
@@ -64,7 +64,7 @@ repository. `make test` and `make ping` must both pass before you write any
 code. Your code never depends on the vendor: the harness keeps every message in
 one format and translates for the backend.
 
-### Where to start: Lab 1
+### Where to start: Assignment 1
 
 | Order | What you write | How you test it | Costs |
 |---|---|---|---|
@@ -81,14 +81,14 @@ one format and translates for the backend.
 | Path | What it is | Yours to edit? |
 |---|---|---|
 | `harness/` | The model client, tracker, trace writer, runner, prices, scripted models | No |
-| `tools/` | The three tools and their registry | Not yet (Lab 3 rewrites them) |
+| `tools/` | The three tools and their registry | Not yet (Week 3 rewrites them) |
 | `fixtures/` | Ledgerline's codebase, the issues, the answers, a recorded run | **Never** |
-| `checks/` | The lab checkers, and `FORMATS.md`, which defines every format they read | No |
+| `checks/` | The checkers, one per assignment, and `FORMATS.md`, which defines every format they read | No |
 | `tests/` | The harness's own tests | No |
 | `settings.yaml`, `pricing.yaml` | Your model, the ceilings, the dated price sheet | Once, in setup: your model and its price line; never the ceilings |
 | `run.py` | Runs a way over a set of issues, one trace per run | No |
 | `agent/` | Your loop, and its bounds | **Yes** |
-| `ways/` | Your four ways of doing Lab 1's task | **Yes** |
+| `ways/` | Your four ways of doing Assignment 1's task | **Yes** |
 | `eval/` | Your grounded success check, your results script, and your Part 0 script | **Yes** |
 | `prompts/` | Every prompt you write, one file each | **Yes** |
 | `reports/`, `ARCHITECTURE.md`, `CHANGES.md` | Your write-ups; `reports/` starts with templates | **Yes** |
@@ -102,7 +102,7 @@ python run.py --way workflow --set eval --runs 10       # a measurement: 60 runs
 make ping                                                # check your model: two tiny calls
 make bounds-smoke                                        # your agent against a model that never stops; free
 make reset                                               # archive old comments before a measurement
-make check-01                                            # the Lab 1 checker
+make check-01                                            # the Assignment 1 checker
 ```
 
 Each run writes `runs/<run_id>.jsonl` and appends a line to
@@ -116,20 +116,20 @@ the harness waits as long as your vendor asks before it retries.
 
 - **Success is read from the tracker, never from the agent.** Your
   `eval/check_triage.py` decides; the model's closing words decide nothing.
-- **Every run has a hard ceiling** (`session_token_ceiling`), and **every lab has
-  one** (`lab_token_ceiling`). Your loop's own budget sits below the first; the
+- **Every run has a hard ceiling** (`session_token_ceiling`), and **every assignment
+  has one** (`lab_token_ceiling`). Your loop's own budget sits below the first; the
   runner stops starting runs at the second. Ask before you pass `--over-budget`.
 - **Every number carries its run count and its spread.** Plan for ten runs, not one.
 - **Prompts live in `prompts/`**, and a layer held only by a prompt is empty.
 - **Disclose AI assistance** in each report: which tool, what it wrote, what you
   checked.
 
-## Submitting a lab
+## Submitting an assignment
 
 Your copy of this repository is private. When you create it, add the course
 staff's GitHub account as a collaborator (**Settings**, then **Collaborators**)
-and post its URL on the lab's Canvas assignment: that is how staff find and read
-your work. Then, for each lab:
+and post its URL on the assignment in Canvas: that is how staff find and read
+your work. Then, for each assignment:
 
 Run `make check-01` first; it is the same checker staff run. Commit everything,
 including `runs/` and `tracker/` (the checker reads both), then tag the commit
@@ -139,12 +139,12 @@ submitted.
 ```bash
 make check-01
 git add -A
-git commit -m "Lab 1"
+git commit -m "Assignment 1"
 git tag lab-01
 git push
 git push origin lab-01
 ```
 
-Some labs ask you to push a file before you measure: in Lab 1, your
+Some assignments ask you to push a file before you measure: in Assignment 1, your
 predictions. Commit and push it on its own, before the runs it predicts. The
 time GitHub records for the push is the one that counts.

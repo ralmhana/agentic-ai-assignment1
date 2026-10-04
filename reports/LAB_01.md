@@ -1,4 +1,4 @@
-# Lab 1 report · Four ways to triage an issue
+# Assignment 1 report · Four ways to triage an issue
 
 Every number here also goes in `reports/LAB_01.json`, which the checker reads
 (format: `checks/FORMATS.md`, section 7). Give each number its run count. Mark

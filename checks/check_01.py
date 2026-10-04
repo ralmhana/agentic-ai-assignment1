@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Lab 1 checker. Run it with `make check-01`.
+"""Assignment 1 checker. Run it with `make check-01`.
 
 It reads only the environment: your runs/ traces, the tracker's comments, your
 reports/LAB_01.json and ARCHITECTURE.md, and it calls your code directly with a
 scripted model. It never asks a model anything and never trusts a model's words.
 
-Lab 1 is scored out of 100. The checker awards the automated 80, over all four
+Assignment 1 is scored out of 100. The checker awards the automated 80, over all four
 ways (Part D's hybrid is the fourth); staff read Parts C and D for the other 20. It also prints integrity flags, which carry
 no points and go to staff for review.
 """
@@ -389,7 +389,7 @@ REF = re.compile(r"`([\w./-]+):(\d+)`")
 def integrity_flags(answers: dict) -> list[str]:
     """Evaluation answers found where they should not be. No points: staff decide.
 
-    Tuning on the evaluation issues is against the lab's rules, and an answer
+    Tuning on the evaluation issues is against the assignment's rules, and an answer
     path inside a prompt or in the code of a way is the plainest sign of it."""
     flags = []
     paths = {a["file"] for a in answers.values() if a["file"] != "none"}
@@ -463,7 +463,7 @@ def main() -> int:
         check_audit(),
     ]
     backends = sorted({r["backend"] for way in WAYS for r in runs[way]})
-    print(f"Lab 1 check · runs read from runs/ · backends seen: {', '.join(backends) or 'none'}")
+    print(f"Assignment 1 check · runs read from runs/ · backends seen: {', '.join(backends) or 'none'}")
     if any(b not in REAL_BACKENDS for b in backends):
         print("  note: runs from a scripted or simulated backend are not a measurement of a model")
     unpriced = sum(1 for way in WAYS for r in runs[way] for c in r["model_calls"] if c.get("cost_usd") is None)

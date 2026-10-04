@@ -1,7 +1,7 @@
 """RepoMind's tools, and the registry that runs them.
 
-Lab 1 has three: read_issue, search_repo, post_comment. Their definitions are
-plain on purpose. Lab 3 rewrites them against Week 3's six rules, so do not
+Assignment 1 has three: read_issue, search_repo, post_comment. Their definitions
+are plain on purpose. Week 3 rewrites them against its six rules, so do not
 polish them here.
 
 A registry is bound to one run: post_comment stamps that run's ID on every

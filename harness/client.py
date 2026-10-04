@@ -1,11 +1,11 @@
 """The metered model client.
 
-Every model call in every lab goes through ModelClient.create. It times the
+Every model call in every assignment goes through ModelClient.create. It times the
 call, prices it from pricing.yaml, keeps running totals, and refuses to start a
 call once the run's hard ceiling (settings.session_token_ceiling) is reached.
 
 That ceiling is the course's backstop, not your loop's token budget: your loop
-enforces its own, lower budget (Lab 1, Part A) and ends the run cleanly first.
+enforces its own, lower budget (Assignment 1, Part A) and ends the run cleanly first.
 
 Messages use one format whatever your vendor: a list of {"role", "content"}
 dicts, where an assistant turn's content is exactly `response.content` (keep

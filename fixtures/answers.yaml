@@ -1,5 +1,5 @@
-# Known answers for every Lab 1 issue. Tune only on the dev issues; the
-# evaluation issues are for measurement (Lab 1, Part B).
+# Known answers for every Assignment 1 issue. Tune only on the dev issues; the
+# evaluation issues are for measurement (Assignment 1, Part B).
 #
 # label: one of bug | feature | question | docs   (definitions: checks/FORMATS.md, section 1)
 # file:  the file most responsible, relative to fixtures/repo, or none

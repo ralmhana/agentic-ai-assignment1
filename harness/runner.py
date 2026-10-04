@@ -7,7 +7,7 @@ For every run the runner (not your code, not the model):
     registry bound to that run_id, so every comment is stamped with it;
   - calls ways/<way>.py's run(ctx);
   - appends the run's totals to runs/_ledger.jsonl, and refuses to start new
-    runs once the lab's token ceiling is spent.
+    runs once the assignment's token ceiling is spent.
 
 A run that raises is recorded with its error and the sweep carries on.
 """
@@ -130,7 +130,7 @@ def run_sweeps(way: str, issues: list[int], sweeps: range, backend_name: str | N
     backend_name = backend_name or settings.provider
     if not backend_name or (backend_name in REAL_BACKENDS and not settings.model):
         raise SystemExit("settings.yaml: choose your provider and model first "
-                         "(the Lab 1 handout, Getting started, step 2), then run `make ping`.")
+                         "(the Assignment 1 handout, Getting started, step 2), then run `make ping`.")
     prices = PriceSheet(root / "pricing.yaml")
     tracker = Tracker(root)
     runs_dir = root / "runs"

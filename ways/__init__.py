@@ -1,4 +1,4 @@
-"""The four ways of doing Lab 1's task: direct, workflow, agent, and Part D's
+"""The four ways of doing Assignment 1's task: direct, workflow, agent, and Part D's
 hybrid, which you create. Each module has run(ctx) -> None.
 
 ctx is a harness.runner.WayContext: ctx.issue_number, ctx.client, ctx.tools,

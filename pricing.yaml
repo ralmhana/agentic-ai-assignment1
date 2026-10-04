@@ -1,4 +1,4 @@
-# The price sheet. Every cost in every lab is computed from this file.
+# The price sheet. Every cost in every assignment is computed from this file.
 #
 # Prices are perishable. The course re-verifies its rows before each term and
 # changes read_date when it does. Never hard-code a price anywhere else.
@@ -15,7 +15,7 @@
 # the input price. A model reported under a dated name (my-model-name-2026-01-01)
 # uses the line whose name it starts with. `make ping` says UNPRICED if no line
 # matches; an unpriced call counts as $0, which makes every cost comparison wrong.
-# On a free tier, still use the paid rate your vendor's page lists: the labs
+# On a free tier, still use the paid rate your vendor's page lists: the assignments
 # measure what your designs would cost to run.
 
 read_date: 2026-06-24

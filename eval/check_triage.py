@@ -1,4 +1,4 @@
-"""Lab 1, Part B: the grounded success check. This file is yours.
+"""Assignment 1, Part B: the grounded success check. This file is yours.
 
 Write it once and use it for every way. The checker calls it with this
 exact signature, including on planted runs designed to catch a check that
@@ -18,4 +18,4 @@ the course checker read comments the same way.
 
 
 def check(tracker, run_id: str, issue_number: int, answer: dict) -> bool:
-    raise NotImplementedError("Lab 1 Part B: the grounded check")
+    raise NotImplementedError("Assignment 1 Part B: the grounded check")

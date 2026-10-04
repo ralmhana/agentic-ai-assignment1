@@ -1,7 +1,7 @@
 """Scripted models: test your loop without spending a token.
 
 NeverStops asks for a tool on every call and never ends its turn, so the only
-thing that can stop a run is your loop's bounds. The Lab 1 checker runs your
+thing that can stop a run is your loop's bounds. The Assignment 1 checker runs your
 loop against it. You can too:
 
     python run.py --way agent --backend never-stops --set dev --runs 1

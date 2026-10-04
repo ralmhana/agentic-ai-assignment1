@@ -10,4 +10,4 @@ post_comment. Your loop writes the trace, including trace.end.
 
 
 def run(ctx) -> None:
-    raise NotImplementedError("Lab 1 Part A, task 5: the agent way")
+    raise NotImplementedError("Assignment 1 Part A, task 5: the agent way")

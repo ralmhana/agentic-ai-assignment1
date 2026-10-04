@@ -1,4 +1,4 @@
-"""Lab 1, Part A: the smallest tool-using loop you can write. This file is yours.
+"""Assignment 1, Part A: the smallest tool-using loop you can write. This file is yours.
 
 The contract (checks/FORMATS.md, section 3). The checker calls run_loop
 directly, with a scripted model that never stops, a stub tool registry and its
@@ -51,4 +51,4 @@ def load_bounds(path: Path | str = Path(__file__).parent / "bounds.yaml") -> Bou
 
 
 def run_loop(client, tools, system: str, user_message: str, bounds: Bounds, trace) -> str:
-    raise NotImplementedError("Lab 1 Part A: write the loop")
+    raise NotImplementedError("Assignment 1 Part A: write the loop")

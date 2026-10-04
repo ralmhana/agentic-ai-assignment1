@@ -10,7 +10,7 @@ You build on these; you do not edit them. The checkers assume they are unchanged
     backends  the real model provider
     scripted  scripted models for testing without spending tokens
     tracker   the mock issue tracker
-    runner    runs a way over issues, stamps run IDs, keeps the lab ledger
+    runner    runs a way over issues, stamps run IDs, keeps the token ledger
 """
 
 from pathlib import Path

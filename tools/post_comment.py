@@ -1,4 +1,4 @@
-"""post_comment: write a comment on an issue. The only write RepoMind has in Lab 1,
+"""post_comment: write a comment on an issue. The only write RepoMind has in Assignment 1,
 and it is public: whoever filed the issue can read it."""
 
 SCHEMA = {

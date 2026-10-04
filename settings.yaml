@@ -1,9 +1,9 @@
 # RepoMind settings.
 #
 # YOUR MODEL. Choose any model, from any vendor, that supports tool (function)
-# calling, and pay for it with your own key. A cheap one is fine: each lab
+# calling, and pay for it with your own key. A cheap one is fine: each assignment
 # compares designs on one model, never models against each other. Choose it
-# before Lab 1's Part B and hold it fixed for the whole lab: every comparison
+# before Assignment 1's Part B and hold it fixed for the whole assignment: every comparison
 # you make holds it fixed. The model is named here and in pricing.yaml, nowhere else.
 #
 #   Claude, through Anthropic's API:

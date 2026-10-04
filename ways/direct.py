@@ -14,4 +14,4 @@ Keep your prompt in prompts/ and load it with ctx.prompt("direct.md").
 
 
 def run(ctx) -> None:
-    raise NotImplementedError("Lab 1 Part B: the direct call")
+    raise NotImplementedError("Assignment 1 Part B: the direct call")

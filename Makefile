@@ -21,5 +21,5 @@ reset:           ## archive tracker comments and start empty (before a measureme
 bounds-smoke:    ## your agent way against the model that never stops; free
 	$(PY) run.py --way agent --backend never-stops --set dev --runs 1
 
-check-01:        ## the Lab 1 checker
+check-01:        ## the Assignment 1 checker
 	$(PY) checks/check_01.py

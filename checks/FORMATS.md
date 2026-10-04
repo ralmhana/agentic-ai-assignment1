@@ -1,7 +1,7 @@
 # FORMATS.md · what the checkers read
 
-Every format a checker parses is defined here and nowhere else. If a lab's
-prose and this file ever disagree, this file wins; tell your instructor.
+Every format a checker parses is defined here and nowhere else. If an assignment's
+handout and this file ever disagree, this file wins; tell your instructor.
 
 ## 1. The task, and the comment it produces
 
@@ -91,7 +91,7 @@ What the checker asserts:
   call of the limit.
 
 A **step** is one model call. (Week 12 uses "turn" for everything between two
-user messages; the labs call that an episode.)
+user messages; the course calls that an episode.)
 
 ## 4. The scripted model, and the published A
 
@@ -206,4 +206,4 @@ file must exist, have that line, and not be under `prompts/`.
 `lab_token_ceiling` per lab (the runner refuses the next run). Every run appends
 one line to `runs/_ledger.jsonl`: `run_id`, `way`, `issue`, `sweep`, `backend`,
 `total_tokens`, `cost_usd`, `error`, `finished`. Runs on the scripted backend
-are free and do not count toward the lab ceiling.
+are free and do not count toward the assignment's token ceiling.

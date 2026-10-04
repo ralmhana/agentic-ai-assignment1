@@ -24,7 +24,7 @@ def main(argv=None) -> int:
     p.add_argument("--start-sweep", type=int, default=1, help="number of the first sweep, to resume")
     p.add_argument("--backend", help="default: the provider in settings.yaml; never-stops tests your bounds for free")
     p.add_argument("--jobs", type=int, help="runs at once (default from settings.yaml)")
-    p.add_argument("--over-budget", action="store_true", help="ignore the lab token ceiling (ask first)")
+    p.add_argument("--over-budget", action="store_true", help="ignore the assignment's token ceiling (ask first)")
     a = p.parse_args(argv)
 
     issues = ([int(x) for x in a.issues.split(",")] if a.issues

@@ -51,6 +51,6 @@ def parse_triage_comment(body: str) -> tuple[str | None, str | None]:
 
 
 def format_triage_comment(label: str, file: str | None, note: str = "") -> str:
-    """The comment body the lab expects: two lines, then anything you like."""
+    """The comment body the assignment expects: two lines, then anything you like."""
     body = f"label: {label}\nfile: {normalize_path(file) or 'none'}"
     return f"{body}\n\n{note.strip()}" if note.strip() else body
