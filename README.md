@@ -47,12 +47,12 @@ If `pricing.yaml` has no line for your model, add one from your vendor's price
 page, with that page and the date you read it (the file shows how). On a free
 tier, still use the paid rate the page lists, or every cost comparison is $0.
 
-**Not sure which?** We recommend starting with Google's Gemini API, which has a
-free tier and was tested with this assignment in October 2026: `provider:
-openai-compatible`, `base_url: https://generativelanguage.googleapis.com/v1beta/openai/`,
-`api_key_env: GEMINI_API_KEY`, and `model: gemini-3.5-flash-lite` (the smaller
-`gemini-3.1-flash-lite` often searched in circles). Nothing here depends on it:
-any vendor's model with tool calling works the same way. Then:
+**Not sure which?** Start with Google's Gemini API, which has a free tier:
+`provider: openai-compatible`,
+`base_url: https://generativelanguage.googleapis.com/v1beta/openai/`,
+`api_key_env: GEMINI_API_KEY`, and `model: gemini-3.5-flash-lite`. Avoid the
+very smallest models, such as `gemini-3.1-flash-lite`, which tend to search in
+circles. Any vendor's model with tool calling works the same way. Then:
 
 ```bash
 export OPENAI_API_KEY=...      # or ANTHROPIC_API_KEY, or the variable you named
